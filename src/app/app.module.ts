@@ -10,6 +10,8 @@ component';
 import { TrainSeatBookingService } from './train-seat-booking/train-seat-booking.service';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { environment } from './environments/environment';
+
 
 @NgModule({
   declarations: [
