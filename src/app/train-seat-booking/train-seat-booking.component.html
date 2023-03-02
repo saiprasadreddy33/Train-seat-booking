@@ -1,0 +1,30 @@
+<h2>Train Seat Booking</h2>
+
+<div class="train-seat-booking-container">
+  <div class="train-seat-booking">
+    <div class="train-seat-map">
+      <div class="train-seat-row" *ngFor="let row of rows; let i = index">
+        <div class="train-seat" *ngFor="let seat of row.seats; let j = index">
+          <div class="train-seat-status" [ngClass]="{'selected': seat.selected, 'booked': seat.booked}" (click)="selectSeat(row.rowNumber, seat.seatNumber)">
+            {{row.rowName}} - {{seat.seatNumber}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="train-seat-booking-form">
+      <form (submit)="bookSelectedSeats()" [formGroup]="bookingForm">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" formControlName="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" formControlName="email" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" [disabled]="!bookingForm.valid || selectedSeats.length == 0">Book Seats</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
