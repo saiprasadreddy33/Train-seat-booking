@@ -1,0 +1,115 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* Header styles */
+.header {
+  background-color: #5b5b5b;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Train list styles */
+.train-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.train-card {
+  border: 1px solid #d9d9d9;
+  margin: 20px;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.train-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.train-image {
+  max-height: 200px;
+}
+
+.train-name {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.train-destination {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.train-book-button {
+  margin-top: 10px;
+}
+
+/* Train seat booking styles */
+.booking-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.booking-card {
+  border: 1px solid #d9d9d9;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.booking-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.booking-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.seat-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.seat {
+  background-color: #d9d9d9;
+  border: 1px solid white;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.seat:hover {
+  background-color: #7d7d7d;
+}
+
+.seat.booked {
+  background-color: #e74c3c;
+  cursor: not-allowed;
+}
+
+.booking-footer {
+  margin-top: 20px;
+}
+
+.reset-button {
+  margin-top: 10px;
+}
